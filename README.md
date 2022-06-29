@@ -36,12 +36,12 @@ os.system('unzip -t oldrepos.zip')
 - Run this script within the dir
 ```python
 # you might want to hard code `root_path` if you plan to re-run this script 
-root_path = os.getcwd()
+root_path = os.getcwd() 
 
 # iteratively create/push to repo on new subscription
 for x in os.listdir(root_path):
     print('Creating repo .... ' + x)
-    os.system(f"gh repo create {x} --private") # <- **adjust flag accordingly if you want repo to be public**
+    os.system(f"gh repo create {x} --private") # <- **adjust flag accordingly if you want repo to be public etc**
     
     print('Pushing repo .... ' + x)
     os.chdir(root_path + '/' + x)
@@ -57,5 +57,5 @@ for x in os.listdir(root_path):
 - Thats it!
 
 ## Notes
-- This copies all your codes in main
+- This copies all your codes in main, so please be mindful
 - Will not copy PRs, releases, history, issues etc
